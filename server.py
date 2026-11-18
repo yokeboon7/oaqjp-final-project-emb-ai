@@ -13,6 +13,9 @@ def emotion_detector():
 
     response = detect_emotion(text_to_analyze)
 
+    if response['dominant_emotion'] is None:
+        return "Invalid text! Please try again!"
+
     return response
 
 if __name__ == "__main__":
